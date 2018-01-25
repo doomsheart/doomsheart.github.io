@@ -46,8 +46,14 @@ function line() {
 function buttonClick() {
     if (is_click_able) {
         is_click_able = false;
-        popup();
-    };
+        var popUpWindow = document.getElementById("popUpWindow");
+        popUpWindow.classList.remove("hidden");
+        //popup();
+    } else {
+        is_click_able = true;
+        var popUpWindow = document.getElementById("popUpWindow");
+        popUpWindow.classList.add("hidden");
+    }
 };
 
 function popup() {
