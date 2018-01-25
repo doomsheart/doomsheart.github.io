@@ -29,37 +29,39 @@ var spriteSheet = new createjs.SpriteSheet(button_img_data);
 function point() {
     this.x_coordinate = 0;
     this.y_coordinate = 0;
-    this.is_open = false;
-    this.is_clear = false;
+    // this.is_open = false;
+    // this.is_clear = false;
     // this.sprite_sheet = new createjs.Sprite(spriteSheet, "unopened");
     // this.button_helper = new createjs.ButtonHelper(target=this.sprite_sheet);
     this.sprite_sheet;
     this.button_helper;
     // this.sprite_sheet.addEventListener("click", buttonClick);
-};
+}
 
 function line() {
     this.color = "#CCEEFF";
     this.is_clear = false;
-};
+}
 
-function buttonClick() {
+function windowOpen() {
     if (is_click_able) {
         is_click_able = false;
         var popUpWindow = document.getElementById("popUpWindow");
         popUpWindow.classList.remove("hidden");
         //popup();
-    } else {
-        is_click_able = true;
-        var popUpWindow = document.getElementById("popUpWindow");
-        popUpWindow.classList.add("hidden");
     }
-};
+}
+
+function buttonClick() {
+    is_click_able = true;
+    var popUpWindow = document.getElementById("popUpWindow");
+    popUpWindow.classList.add("hidden");
+}
 
 function popup() {
     alert("yayayayay");
     is_click_able = true;
-};
+}
 
 function display_map(_stage, _pointList) {
     // STAGE_WIDTH = document.getElementById(STAGE_NAME).width;
@@ -79,12 +81,12 @@ function display_map(_stage, _pointList) {
         set_child.y = y_translated;
         // set_child.button_helper.target = set_child.sprite_sheet;
     }
-};
+}
 
 function handleTick(event) {
     display_map(stage, pointList);
     stage.update(event);
-};
+}
 
 function init() {
     stage = new createjs.Stage(STAGE_NAME);
@@ -105,10 +107,10 @@ function init() {
         pointList[i].sprite_sheet.scaleY = box_size / IMG_SIZE;
         // alert("2");
         // pointList[i].button_helper = new createjs.ButtonHelper(pointList[i].sprite_sheet);
-        pointList[i].sprite_sheet.addEventListener("click", buttonClick);
+        pointList[i].sprite_sheet.addEventListener("click", windowOpen);
         stage.addChild(pointList[i].sprite_sheet);
-    };
+    }
     
     createjs.Ticker.addEventListener("tick", handleTick);
     createjs.Ticker.setFPS(50);
-};
+}

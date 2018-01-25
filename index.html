@@ -21,12 +21,34 @@
                 display: none;
             }
         </style>
+        <style>
+            #popUpWindow {
+              animation-duration: 0.5s;
+              animation-name: slidein;
+            }
+
+            @keyframes slidein {
+              from {
+                left: 164px;
+                top: 0px;
+              }
+
+              to {
+                left: 164px;
+                top: 65px;
+              }
+            }
+        </style>
     </head>
     <body>
         <canvas id="popUpStage" width=500 height=300>
             Your browser dose not support canvas!
         </canvas>
-        <div id="popUpWindow" class="hidden"></div>
+        <div id="popUpWindow" class="hidden">
+                    <button onclick="buttonClick();" style="float:right;">
+                        &#9746;
+                    </button>
+        </div>
     </body>
     <script>
         window.onload = function() {
