@@ -1,61 +1,17 @@
 <!DOCTYPE html>
-<img src="" crossorigin="Anonymous" />
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <!-- <link rel="stylesheet" href="layout.css"> -->
-        <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
-        <script src="popup.js"></script>
-        <style>
-            #popUpWindow {
-                position: fixed;
-                width: 100px;
-                height: 150px;
-                left: 164px;
-                top: 65px;
-                background-color: gray;
-            }
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky src="panorama.jpg" rotation="0 -130 0"></a-sky>
 
-            #popUpWindow.hidden {
-                display: none;
-            }
-        </style>
-        <style>
-            #popUpWindow {
-              animation-duration: 0.5s;
-              animation-name: slidein;
-            }
-
-            @keyframes slidein {
-              from {
-                left: 164px;
-                top: 0px;
-              }
-
-              to {
-                left: 164px;
-                top: 65px;
-              }
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="popUpStage" width=500 height=300>
-            Your browser dose not support canvas!
-        </canvas>
-        <div id="popUpWindow" class="hidden">
-                <button onclick="closeWindow();" style="float:right;">
-                    &#9746;
-                </button>
-                <button onclick="clearStage();" style="float:bottom;">
-                    CLEAR
-                </button>
-        </div>
-    </body>
-    <script>
-        window.onload = function() {
-            init();
-        }
-    </script>
+      <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5"
+              rotation="0 15 0"></a-text>
+    </a-scene>
+  </body>
 </html>
