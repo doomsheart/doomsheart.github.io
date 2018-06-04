@@ -17,7 +17,7 @@ install:
 
 # 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
 before_script:
-- git config --global user.name 'Joonho Wohn'
+- git config --global user.name 'doomsheart'
 - git config --global user.email 'doomsheart@naver.com'
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 
