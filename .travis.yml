@@ -9,8 +9,8 @@ branches:
   only:
   - source
 
-before_install:
-- npm install -g hexo
+# before_install:
+# - npm install -g hexo
 
 install:
 - npm install
@@ -34,8 +34,8 @@ script:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 # 주의: <YOUR NAME>, <COMMIT MESSAGE>와 <YOUR EMAIL>를 변경해야합니다.
-deploy:
-  type: git
-  repo: https://__GITHUB_TOKEN__@github.com/doomsheart/doomsheart.github.io
-  branch: master
-  message: "using travis to deploy"
+# deploy:
+#   type: git
+#   repo: https://__GITHUB_TOKEN__@github.com/doomsheart/doomsheart.github.io
+#   branch: master
+#   message: "using travis to deploy"
