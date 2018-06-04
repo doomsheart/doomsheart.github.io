@@ -24,8 +24,8 @@ before_script:
 # 블로그를 빌드 후 배포합니다.
 script:
 - hexo clean
-- hexo g
-- hexo d
+- hexo generate
+- hexo deploy
 
 # _config.yml
 
