@@ -81,3 +81,22 @@ deploy:
   type: git
   repo: https://__GITHUB_TOKEN__@github.com/doomsheart/doomsheart.github.io
   branch: master
+
+nofollow:
+  # 플러그인 활성화
+  enable: true
+  # 제외할 호스트
+
+# sitemap auto generator
+sitemap:
+  path: sitemap.xml
+
+
+# rss feed auto generator
+feed:
+  # feed type (atom / rss2)
+  type: rss2
+  # feed path (Default: atom.xml / rss2.xml)
+  path: rss2.xml
+  # 최신 포스트의 갯수 설정. (0 또는 false 입력시 전체 포스트)
+  limit: 20

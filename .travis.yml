@@ -14,6 +14,10 @@ branches:
 
 install:
 - npm install
+- npm install hexo-autonofollow --save
+- npm install hexo-auto-canonical --save
+- npm install hexo-generator-seo-friendly-sitemap --save
+- npm install hexo-generator-feed --save
 
 # 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
 before_script:
