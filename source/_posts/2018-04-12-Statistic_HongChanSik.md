@@ -1,3 +1,4 @@
+---
 title: 통계학 홍찬식 # 포스트의 제목을 작성해 주세요
 date: 2018-04-12 08:04:26   # 작성 일자 YYYY-MM-DD HH:MM:SS 형태로 작성해 주세요
 author: doomsheart           # 작성자 이름 혹은 깃허브 아이디
