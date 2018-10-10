@@ -18,6 +18,7 @@ install:
 - npm install hexo-auto-canonical --save
 - npm install hexo-generator-seo-friendly-sitemap --save
 - npm install hexo-generator-feed --save
+- npm install hexo-generator-robotstxt --save
 
 # 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
 before_script:
@@ -30,7 +31,6 @@ script:
 - hexo clean
 - hexo generate
 - hexo deploy
-- ls
 # _config.yml
 
 # 기타 Hexo 설정...
