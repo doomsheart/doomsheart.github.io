@@ -30,7 +30,7 @@ script:
 - hexo clean
 - hexo generate
 - hexo deploy
-
+- ls
 # _config.yml
 
 # 기타 Hexo 설정...
